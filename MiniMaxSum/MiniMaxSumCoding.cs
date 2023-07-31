@@ -23,7 +23,10 @@ class Result
 
     public static void miniMaxSum(List<int> arr)
     {
-        int max=arr[0],min=arr[0];
+        long max=arr[0];
+        long min=arr[0];
+        long sum = 0;
+        
         for(int i = 0;i<arr.Count;i++)
         {
             if(arr[i]>max)
@@ -34,8 +37,10 @@ class Result
             {
                min = arr[i];                
             }
+            
+            sum += arr[i];
         }
-        int sum = arr.Sum();
+        
         Console.WriteLine((sum-max).ToString() + " " + (sum-min).ToString() );
     }
 
